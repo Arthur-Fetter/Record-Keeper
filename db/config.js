@@ -1,7 +1,3 @@
-const fs = require('fs');
-
-console.log(process.env.DP_DB_DATABASE);
-
 module.exports = {
     development: {
         username: process.env.DP_DB_USERNAME,
