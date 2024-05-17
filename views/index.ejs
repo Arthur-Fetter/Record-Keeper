@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <h1>Records</h1>
+
+    <ul>
+        <% records.forEach(record => { %>
+            <li>
+                <h2><%= record.title %></h2>
+                <p><%= record.content %></p>
+                <form action="/record/delete/<%= record.id %>" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }) %>
+        </ul>
+    
+    <form action="/record/create/" method="post">
+        <input type="text" id="record-title" name="record-title">
+        <input type="text" id="record-content" name="record-content">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
